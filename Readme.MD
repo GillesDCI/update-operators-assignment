@@ -35,7 +35,7 @@ Create a new `patch` route which allows you to remove the first or last tag from
 Tip: 
 
 ````javascript 
- const updatedItem = await User.findByIdAndUpdate(id, {$pop:{ item:1 }}, {new:true})
+ const updatedItem = await Schema.findByIdAndUpdate(id, {$pop:{ item:1 }}, {new:true})
 
 ````
 
@@ -43,7 +43,7 @@ Tip:
 Create a new `patch` route which allows you to remove the `genre` field from the song document by ID.
 
 ````javascript 
- const updatedItem = await User.findByIdAndUpdate(id, {$unset:{ field:""}}, {new:true})
+ const updatedItem = await Schema.findByIdAndUpdate(id, {$unset:{ field:""}}, {new:true})
 ````
 
 

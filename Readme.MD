@@ -10,22 +10,27 @@ This assignment allows you to practice update operators. 😊
 `npm install mongoose express dotenv cors`
 
 ### 1. Set up your server
-Set up the `server.js` and configure everything accordingly. You will notice some things are missing, try to find what and wire up.
-
+Set up the `server.js` and configure everything accordingly.Add a new songRoutes and wire it up with the server. 
 
 ### 2. Assignment Update Operators 
-Let's build our API for order management. The following functionality is required: 
+We will practice the update operators.
 
 #### Task 1. Inserting songs 
 Create a new `post` route which allows you to ceate a new song into the database. 
 
-
 #### Task 2. Update a song by ID  
-Create a new `patch` route which allows you to update the song by ID.  
+Create a new `patch` route which allows you to update the song by ID. Make sure all fields can be updated except the `tags`.  
 
-#### Task 3. List customers
-Create a new `get` route which allows you to get a list from all the customers. 
-Use the `limit` and `skip` methods to paginate the results. 
+#### Task 3. Update the tags array of a song by ID
+Create a new `patch` route which allows you to add tags to the array. Make sure that each tag can only be added once. 
+
+Tip: 
+
+````javascript 
+
+
+````
+
 
 #### Task 4 . Inserting orders
 Create a new `post` route which allows you to create a new order into the database. 

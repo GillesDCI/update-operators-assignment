@@ -29,7 +29,7 @@ const updatedItem = await Schema.findByIdAndUpdate(id, {$addToSet:{ item:item }}
 
 ````
 
-#### Task 4 . Remove the first/last item from the tags array
+#### Task 4 . Remove the first/last item from the tags array by ID
 Create a new `patch` route which allows you to remove the first or last tag from the `tags` array based on a route parameter you supply. 
 
 Tip: 
@@ -39,8 +39,8 @@ Tip:
 
 ````
 
-#### Task 5. Remove field
-Create a new `patch` route which allows you to remove the `genre` field from the document.
+#### Task 5. Remove field by ID
+Create a new `patch` route which allows you to remove the `genre` field from the song document by ID.
 
 ````javascript 
  const updatedItem = await User.findByIdAndUpdate(id, {$unset:{ field:""}}, {new:true})

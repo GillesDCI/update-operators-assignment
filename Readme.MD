@@ -1,16 +1,14 @@
 # Assignment Update operators 
 This assignment allows you to practice update operators. 😊
 
-### Install the following modules: 
-+ mongoose 
-+ express
-+ dotenv
-+ cors
-
-`npm install mongoose express dotenv cors`
+### Install the modules: 
+`npm install`
 
 ### 1. Set up your server
-Set up the `server.js` and configure everything accordingly.Add a new songRoutes and wire it up with the server. 
+Set up the `server.js`and configure everything accordingly. 
++ Configure the .env file for mongoose (use a new database for this task)
++ Create the routes 
++ Wire up the routes
 
 ### 2. Assignment Update Operators 
 We will practice the update operators.
@@ -27,29 +25,27 @@ Create a new `patch` route which allows you to add tags to the array. Make sure 
 Tip: 
 
 ````javascript 
-
+const updatedItem = await Schema.findByIdAndUpdate(id, {$addToSet:{ item:item }}, {new:true})
 
 ````
 
+#### Task 4 . Remove the first/last item from the tags array
+Create a new `patch` route which allows you to remove the first or last tag from the `tags` array based on a route parameter you supply. 
 
-#### Task 4 . Inserting orders
-Create a new `post` route which allows you to create a new order into the database. 
-Make sure there's a reference to the User who ordered the order.
+Tip: 
 
-#### Task 5. List orders
-Create a new `get` route which allows you to fetch a list of all the orders in the system. 
-Use the `limit` and `skip` methods to paginate the results. 
+````javascript 
+ const updatedItem = await User.findByIdAndUpdate(id, {$pop:{ item:1 }}, {new:true})
 
-#### Task 6. List orders by Customer
-Create a new `get` route which allows you to fetch a list of all the orders by customer. Make sure you include the customer using the `populate` function.
-
-Example of query using `skip`, `limit` and `populate`.
-````javascript
-    const results = await mySchema.find({})
-    .populate('other')
-    .skip(3)
-    .limit(3)
 ````
+
+#### Task 5. Remove field
+Create a new `patch` route which allows you to remove the `genre` field from the document.
+
+````javascript 
+ const updatedItem = await User.findByIdAndUpdate(id, {$unset:{ field:""}}, {new:true})
+````
+
 
 
 
